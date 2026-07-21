@@ -5,6 +5,7 @@
 ```
 gcs_rust/
   crates/rtcm3_parser/       # протокол RTCM3: parse, CRC-24Q, Frame::from_payload
+  crates/ublox_ubx_parser/   # UBX: FFI к C (u-blox-bg), PVT/SVIN/ACK, CFG pack
   crates/rtk_base_emulator/  # бизнес-логика эмулятора: UBX, MSM, TCP, панель
 ```
 
@@ -13,6 +14,7 @@ gcs_rust/
 ## Границы ответственности
 
 - **Протокол RTCM** (framing, preamble, длина, CRC) — только в `rtcm3_parser`.
+- **Парсинг/pack UBX через C-либу** — в `ublox_ubx_parser` (не дублировать u-blox-bg).
 - **MSM / сообщения / эмуляция базы** — в `rtk_base_emulator`.
 - **Не дублировать CRC-24Q** и сборку заголовка кадра в emulator или других crates — использовать `rtcm3_parser::Crc24q` / `Frame::from_payload`.
 
@@ -21,6 +23,7 @@ gcs_rust/
 ## Проверка
 
 ```bash
+git submodule update --init --recursive
 cargo fmt --all
 cargo test --workspace
 cargo run -p rtk_base_emulator

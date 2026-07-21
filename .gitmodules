@@ -1,0 +1,3 @@
+[submodule "crates/ublox_ubx_parser/native/u-blox-bg"]
+	path = crates/ublox_ubx_parser/native/u-blox-bg
+	url = https://github.com/boris-gu/u-blox-bg.git

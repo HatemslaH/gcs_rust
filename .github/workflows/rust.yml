@@ -15,6 +15,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install libclang
+        run: sudo apt-get update && sudo apt-get install -y libclang-dev
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable

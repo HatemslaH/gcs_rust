@@ -6,8 +6,8 @@ alwaysApply: true
 # gcs_rust workspace
 
 - Layout: crates live under `crates/<name>`; register each in root `Cargo.toml` `[workspace].members`.
-- Shared path deps go in `[workspace.dependencies]` (e.g. `rtcm3_parser`).
-- RTCM framing/CRC only in `rtcm3_parser`; MSM and emulator business logic stay in `rtk_base_emulator`.
+- Shared path deps go in `[workspace.dependencies]` (e.g. `rtcm3_parser`, `ublox_ubx_parser`).
+- RTCM framing/CRC only in `rtcm3_parser`; UBX C FFI in `ublox_ubx_parser`; MSM and emulator business logic stay in `rtk_base_emulator`.
 - Do not reimplement CRC-24Q or RTCM frame wrapping outside `rtcm3_parser`.
 - Prefer `edition.workspace = true` and `license.workspace = true` in member `Cargo.toml`.
 - Domain comments/logs in Russian; code identifiers in English.
