@@ -4,6 +4,7 @@ members = [
   "crates/rtcm3_parser",
   "crates/rtk_base_emulator",
   "crates/ublox_ubx_parser",
+  "crates/geotiff_slicer",
 ]
 
 [workspace.package]
@@ -13,3 +14,4 @@ license = "MIT"
 [workspace.dependencies]
 rtcm3_parser = { path = "crates/rtcm3_parser" }
 ublox_ubx_parser = { path = "crates/ublox_ubx_parser" }
+geotiff_slicer = { path = "crates/geotiff_slicer" }

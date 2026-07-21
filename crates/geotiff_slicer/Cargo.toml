@@ -1,0 +1,12 @@
+[package]
+name = "geotiff_slicer"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+description = "Парсинг GeoTIFF и нарезка XYZ PNG-тайлов"
+
+[dependencies]
+crc32fast = "1"
+dashmap = "6.2"
+rayon = "1.12"
+zune-jpeg = "0.5"
