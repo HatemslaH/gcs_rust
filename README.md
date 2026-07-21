@@ -14,10 +14,10 @@ crates/
 
 ```toml
 # только парсер
-rtcm3_parser = { git = "…", package = "rtcm3_parser" }
+rtcm3_parser = { git = "https://github.com/HatemslaH/gcs_rust.git", package = "rtcm3_parser" }
 
 # эмулятор (rtcm3_parser подтянется транзитивно)
-rtk_base_emulator = { git = "…", package = "rtk_base_emulator" }
+rtk_base_emulator = { git = "https://github.com/HatemslaH/gcs_rust.git", package = "rtk_base_emulator" }
 ```
 
 ## Локальная разработка
