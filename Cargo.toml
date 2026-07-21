@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = ["crates/rtcm3_parser", "crates/rtk_base_emulator"]
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+
+[workspace.dependencies]
+rtcm3_parser = { path = "crates/rtcm3_parser" }
